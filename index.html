@@ -24,46 +24,46 @@
 <body>
 <br>
 
-
+<div class="container">
 <div class="row">
 <div class="col-md-4 col-sd-4">
 <form id="addpost" style="width:100%;text-align:center;">
     <h1>User form</h1>
-    <div>
+    <div class="form-group">
         <br>
-        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="name" placeholder="Name" class="form-control" style="width:100%;">
     </div>
-    <div>
+    <div class="form-group">
         <br>
-        <input type="text" id="email" placeholder="E-mail">
+        <input type="text" id="email" placeholder="E-mail" class="form-control" style="width:100%;">
+    </div >
+    <div class="form-group">
+        <br>
+        <input type="text" id="phone" placeholder="Phone Number" class="form-control" style="width:100%;">
     </div>
-    <div>
+    <div class="form-group">
         <br>
-        <input type="text" id="phone" placeholder="Phone Number">
+        <input type="text" id="gender" placeholder="Gender" class="form-control" style="width:100%;">
     </div>
-    <div>
+    <div class="form-group">
         <br>
-        <input type="text" id="gender" placeholder="Gender">
+        <input type="text" id="message" placeholder="Message" class="form-control" style="width:100%;">
     </div>
-    <div>
-        <br>
-        <input type="text" id="message" placeholder="Message">
-    </div>
-    <div>
+    <div class="form-group">
         <br>
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="btn btn-primary">
     </div>
     </form>
 
     </div>
-    <div class="col-md-4 col-sd-4" style="text-align:left">
+    <div class="col-md-6 col-sd-6" style="text-align:left">
         <div class="container">
         <p id="new"></p>
             </div>
     </div>
 </div>
-
+</div>
 
 <script>
     document.getElementById('addpost').addEventListener('submit',funct);
