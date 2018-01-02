@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
     <link rel="stylesheet" href="static/style.css" type="text/css">
     <title>Form</title>
 </head>
@@ -40,17 +42,25 @@
     <br>
     <input type="submit" value="Submit">
 </form>
-<button id="new2">click for testing</button>
-<p id="new">j</p>
+<p id="new"></p>
+
 <script>
     document.getElementById('addpost').addEventListener('submit',funct);
     function funct(e){
         e.preventDefault();
-        let title=document.getElementById('name').value;
+
+        let name=document.getElementById('name').value;
+        let email=document.getElementById('email').value;
+        let phone=document.getElementById('phone').value;
+        let gender=document.getElementById('gender').value;
+        let message=document.getElementById('message').value;
+
+        var output='<p>Name:'+name+'<br>Email:'+email+'<br>phone:'+phone+'<br>gender:'+gender+'<br>Message:'+message;
+
         console.log('working');
-        console.log(title);
-        document.getElementById('new').innerHTML=title;
+        document.getElementById('new').innerHTML=output;
     }
 </script>
+
 </body>
 </html>
