@@ -43,15 +43,13 @@
 <button id="new2">click for testing</button>
 <p id="new">j</p>
 <script>
-    document.getElementById('new2').addEventListener('click',funct);
+    document.getElementById('addpost').addEventListener('submit',funct);
     function funct(e){
         e.preventDefault();
         let title=document.getElementById('name').value;
-        let title=document.getElementById('name').value;
-        let title=document.getElementById('name').value;
-        let title=document.getElementById('name').value;
-        let title=document.getElementById('name').value;
-        document.getElementById('new').innerHTML=<p>working</p>;
+        console.log('working');
+        console.log(title);
+        document.getElementById('new').innerHTML=title;
     }
 </script>
 </body>
