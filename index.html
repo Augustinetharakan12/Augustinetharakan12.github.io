@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" type="text/css">
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <link rel="stylesheet" href="static/style.css" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Form</title>
 
@@ -26,9 +28,9 @@
 
 <div class="container">
 <div class="row">
-<div class="col-md-4 col-sd-4">
+<div class="col-md-6 col-sd-6">
 <form id="addpost" style="width:100%;text-align:center;">
-    <h1>User form</h1>
+    <h1>USER FORM</h1>
     <div class="form-group">
         <br>
         <input type="text" id="name" placeholder="Name" class="form-control" style="width:100%;">
@@ -47,7 +49,7 @@
     </div>
     <div class="form-group">
         <br>
-        <input type="text" id="message" placeholder="Message" class="form-control" style="width:100%;">
+        <textarea type="text" id="message" placeholder="Message" class="form-control" style="width:100%;" rows="4" cols="50"></textarea>
     </div>
     <div class="form-group">
         <br>
@@ -57,7 +59,7 @@
     </form>
 
     </div>
-    <div class="col-md-6 col-sd-6" style="text-align:left">
+    <div class="col-md-5 col-sd-5" style="text-align:left">
         <div class="container">
         <p id="new"></p>
             </div>
@@ -76,7 +78,7 @@
         let gender=document.getElementById('gender').value;
         let message=document.getElementById('message').value;
 
-        var output='<h1>User details</h1><br><p>Name:'+name+'<br>Email:'+email+'<br>phone:'+phone+'<br>gender:'+gender+'<br>Message:'+message+'</p>';
+        var output='<h1>User details</h1><p>Name:'+name+'<br>Email:'+email+'<br>phone:'+phone+'<br>gender:'+gender+'<br>Message:'+message+'</p>';
 
         fetch('https://httpbin.org/post',{
             method:'POST',
