@@ -64,18 +64,18 @@
         e.preventDefault();
 
         let hours=document.getElementById('hours').value;
-        let percentage=document.getElementById('percentage').value;
+        let percent=document.getElementById('percentage').value;
         let min_percentage=document.getElementById('min_percentage').value;
-        let att=(percentage*hours)/100;
+        let att=(percent*hours);
 
-        var i=0;
+        var i;
 
-        i=i+5;
 
-        for(i=1;(att)/(hours+i)*100>min_percentage;let i=i+1)
-        	console.log(i);
-
-        console.log(att,hours,percentage,min_percentage,i);
+        for(i=0;((att*10)/(hours+i))>min_percentage;i++)
+        {
+			console.log(i,(att)/(hours));
+        }
+        console.log(att,hours,percent,min_percentage,i,((att)/(hours+i)));
 
     	output=i;
 
