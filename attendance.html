@@ -32,15 +32,15 @@
     <h1>BUNK OR NOT </h1>
     <div class="form-group">
         <br>
-        <input type="text" id="hours" placeholder="Total hours taken " class="form-control" style="width:100%;">
+        <input type="number" id="hours" placeholder="Total hours taken " class="form-control" style="width:100%;">
     </div>
     <div class="form-group">
         <br>
-        <input type="text" id="percentage" placeholder="Present percentage" class="form-control" style="width:100%;">
+        <input type="number" id="percentage" placeholder="Present percentage" class="form-control" style="width:100%;">
     </div >
     <div class="form-group">
         <br>
-        <input type="text" id="min_percentage" placeholder="Minimum percentage required" class="form-control" style="width:100%;">
+        <input type="number" id="min_percentage" placeholder="Minimum percentage required" class="form-control" style="width:100%;">
     </div >
     <div class="form-group">
         <br>
@@ -63,17 +63,23 @@
     function funct(e){
         e.preventDefault();
 
-        let hours=document.getElementById('hours').value;
-        let percent=document.getElementById('percentage').value;
-        let min_percentage=document.getElementById('min_percentage').value;
-        let att=(percent*hours);
+        let hours=1*document.getElementById('hours').value;
+        let percent=1*document.getElementById('percentage').value;
+        let min_percentage=1*document.getElementById('min_percentage').value;
 
-        var i;
+        //let hours=55;
+        //let percent=89;
+        //let min_percentage=75;
 
+        let att=(percent*hours)/100;
 
-        for(i=0;((att*10)/(hours+i))>min_percentage;i++)
+        var i=0;
+
+        console.log(i,att,(hours),(att)/(hours+i)*100);
+
+        for(i=0;((att)/(hours+i)*100)>min_percentage;i++)
         {
-			console.log(i,(att)/(hours));
+			console.log(i,att,hours+i,(att)/(hours+i)*100);
         }
         console.log(att,hours,percent,min_percentage,i,((att)/(hours+i)));
 
