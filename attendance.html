@@ -52,6 +52,8 @@
     </div>
     <div class="col-md-5 col-sd-5" style="text-align:left">
         <div class="container">
+            <br>
+            <br>
         <p id="new"></p>
             </div>
     </div>
@@ -62,7 +64,6 @@
     document.getElementById('addpost').addEventListener('submit',funct);
     function funct(e){
         e.preventDefault();
-
         let hours=1*document.getElementById('hours').value;
         let percent=1*document.getElementById('percentage').value;
         let min_percentage=1*document.getElementById('min_percentage').value;
@@ -77,13 +78,24 @@
 
         console.log(i,att,(hours),(att)/(hours+i)*100);
 
-        for(i=0;((att)/(hours+i)*100)>min_percentage;i++)
+        if((att/hours)*100>=75){
+            for(i=0;((att)/(hours+i)*100)>min_percentage;i++)
         {
-			console.log(i,att,hours+i,(att)/(hours+i)*100);
+            console.log(i,att,hours+i,(att)/(hours+i)*100);
         }
         console.log(att,hours,percent,min_percentage,i,((att)/(hours+i)));
 
-    	output=i;
+        output="<p style='color:lightgreen;'>You can cut "+i+" hours :)</p>";
+        }
+        else{
+            for(i=0;((att+i)/(hours+i)*100)<min_percentage;i++)
+        {
+            console.log(i,att,hours+i,(att)/(hours+i)*100);
+        }
+        console.log(att,hours,percent,min_percentage,i,((att)/(hours+i)));
+
+        output="<p style='color:red;'>You can't cut, you have to attend "+i+" more hours :(</p>";
+        }    
 
         document.getElementById('new').innerHTML=output;
     }
