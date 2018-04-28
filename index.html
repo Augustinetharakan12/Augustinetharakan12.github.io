@@ -23,7 +23,9 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 		<style>
 			/* Main css */
+		.body{
 
+		}
 		.timeline {
 		  position: relative;
 		}
@@ -121,14 +123,20 @@
 			border-radius: 60%;
 		}
 
+		.timeline-heading{
+			text-align: center;
+		}
 		@media screen and (max-width:600px){
 			.profile{
 				width:150px;
 			}
+			.timeline-heading{
+				font-size: 40px;
+			}
 		}
 		</style>
 	</head>
-	<body>
+	<body style="background-color: rgba(139,201,120,1);">
 
 		<!-- Header -->
 			<section id="header" style="height:100%">
@@ -146,7 +154,7 @@
 			<section id="one" class="main style1">
 				<div class="container">
 					<div class="row 150%">
-						<div class="6u 12u$(medium)">
+						<div class="">
 							<header class="major">
 								<h2>My works</h2>
 							</header>
@@ -165,6 +173,7 @@
 			<div class="container">
 			    <div class="timeline">
 			      <div class="timeline-event">
+			      	<h1 class="timeline-heading">TIMELINE</h1>
 			        <div class="card timeline-content">
 			          <div class="card-image waves-effect waves-block waves-light">
 			            <img class="activator" src="http://img11.hostingpics.net/pics/681702481.jpg">
