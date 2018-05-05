@@ -180,6 +180,28 @@
 		  -ms-transform: translate(0px, 0px);
 		  transform: translate3d(0px, 0px, 0px);
 		}
+
+		.animation-element.slide-up {
+		  opacity: 0;
+		  -moz-transition: all 500ms linear;
+		  -webkit-transition: all 500ms linear;
+		  -o-transition: all 500ms linear;
+		  transition: all 500ms linear;
+		  -moz-transform: translate3d(0px, -100px, 0px);
+		  -webkit-transform: translate3d(0px, -100px, 0px);
+		  -o-transform: translate(-0px, -100px);
+		  -ms-transform: translate(0px, -100px);
+		  transform: translate3d(0px, -100px, 0px);
+		}
+
+		.animation-element.slide-up.in-view {
+		  opacity: 1;
+		  -moz-transform: translate3d(0px, 0px, 0px);
+		  -webkit-transform: translate3d(0px, 0px, 0px);
+		  -o-transform: translate(0px, 0px);
+		  -ms-transform: translate(0px, 0px);
+		  transform: translate3d(0px, 0px, 0px);
+		}
 		@media screen and (max-width:600px){
 			.inner h1{
 				font-size:30px;
@@ -216,7 +238,7 @@
 				<div class="container">
 					<div class="row 100%">
 						<div class="">
-							<header class="major">
+							<header class="major animation-element slide-up">
 								<h2>My works</h2>
 							</header>
 							<div class="row">
@@ -257,7 +279,7 @@
 						    </div>
 
 						  </div>
-						  	<header class="major">
+						  	<header class="major animation-element slide-up">
 								<h2>My Skills<h2/>
 							</header>
 							<div class="row ">
@@ -274,14 +296,14 @@
 								    </div>
 								</div>
 							</div>
-							<header class="heading-2 major">
+							<header class="heading-2 major animation-element slide-up">
 								<h2 >Programming languages I know<h2/>
 							</header>
 							<table  class="centered">
 							<thead>
 							  <tr>
-							    <th><h4>Language</h4></th>
-							    <th><h4>Level of knowledge</h4></th>
+							    <th><h4 class="animation-element slide-up">Language</h4></th>
+							    <th><h4 class="animation-element slide-up">Level of knowledge</h4></th>
 							  </tr>
 							</thead>
 							  <tr class="animation-element slide-left">
@@ -336,7 +358,7 @@
 			<div class="container">
 			    <div class="timeline">
 			      <div class="timeline-event">
-			      	<h1 class="timeline-heading">TIMELINE</h1>
+			      	<h1 class="timeline-heading animation-element slide-up">TIMELINE</h1>
 			        <div class="card timeline-content animation-element slide-right">
 			          <div class="card-image waves-effect waves-block waves-light">
 			            <img class="activator" src="http://img11.hostingpics.net/pics/681702481.jpg">
